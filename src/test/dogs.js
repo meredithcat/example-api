@@ -67,7 +67,6 @@ describe('Dog API endpoints', () => {
     dog.save().then((savedDog) => {
       chai.request(app)
         .get('/dogs')
-        .set('jwttoken', jwt.sign({ username: 'test_user' }, process.env.JWT_SECRET))
         .end((err, res) => {
           if (err) {
             return done(err)

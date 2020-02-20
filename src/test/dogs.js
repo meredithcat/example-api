@@ -36,6 +36,7 @@ after((done) => {
 describe('Dog API endpoints', () => {
   beforeEach((done) => {
     User.create({username: 'test_user', password: 'itsasecret'})
+    done()
   })
 
   afterEach((done) => {

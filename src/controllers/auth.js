@@ -24,6 +24,7 @@ router.post('/login', (req, res) => {
   // Find this user name
   User.findOne({ username }, "username password")
   .then(user => {
+    console.log(user)
     if (!user) {
       // User not found
       return res.status(401).send({ message: "Wrong Username or Password" });

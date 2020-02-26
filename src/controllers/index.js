@@ -4,10 +4,11 @@ const authRoutes = require('./auth.js');
 
 const router = express.Router(); // eslint-disable-line new-cap
 
-// TODO: Change to your model.
-
+// all routes for accessing resource
 router.use('/dogs', dogRoutes);
 
+
+// all routes for auth
 router.use('/auth', authRoutes);
 
 module.exports = router;
